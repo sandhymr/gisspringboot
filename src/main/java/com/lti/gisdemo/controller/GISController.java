@@ -20,6 +20,11 @@ public class GISController {
 	@Autowired
 	private GISService gisServiceImpl;
 	
+	@GetMapping("/hello")
+	public String getUser() {
+		return "Hello";
+	}
+	
 	@GetMapping("/getUser")
 	public User getUser(@RequestParam long userId) {
 		return gisServiceImpl.getUser(userId);
